@@ -1,0 +1,14 @@
+<h1>Index Page</h1>
+
+<a href="/cards/new">Add a new card</a>
+<ul>
+  <% @cards.each do |card| %>
+  <li>
+    <%= card.title %>:
+    <%= card.description %>
+    <a href="/cards/<%= card.id %>">Show</a>
+    <a href="/cards/<%= card.id %>/edit">Edit</a>
+    <a href="/delete_card/<%= card.id %>">Delete</a>
+  </li>
+  <% end %>
+</ul>

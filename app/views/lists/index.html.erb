@@ -1,0 +1,13 @@
+
+<h3>
+  Index List Page
+</h3>
+
+<ul>
+  <% @lists.each do |list| %>
+  <li>
+    <%= list.title %>
+    <a href="/lists/<%= list.id %>">Show</a>
+  </li>
+  <% end %>
+</ul>
